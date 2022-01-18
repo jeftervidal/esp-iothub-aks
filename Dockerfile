@@ -2,7 +2,7 @@ FROM ubuntu:latest
 RUN apt update
 RUN apt upgrade
 RUN apt install -y python3 python3-pip git 
-RUN git clone https://github.com/jeftervidal/esp-eventhub-aks.git
+RUN git clone https://github.com/jeftervidal/esp-iothub-aks.git
 RUN python3 -m pip install flask
 EXPOSE 8080
 COPY main.py /home/main.py 
