@@ -1,4 +1,4 @@
-from Flask import Flask
+from flask import Flask
 from datetime import datetime
 from azure.eventhub import EventHubConsumerClient
 import os
