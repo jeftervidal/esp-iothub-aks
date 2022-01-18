@@ -7,5 +7,5 @@ RUN python3 -m pip install flask
 EXPOSE 8080
 COPY main.py 
 
-ENTRYPOINT FLASK_APP=/home/main.py flask run --host=0.0.0.0 --port=8080
+ENTRYPOINT FLASK_APP=/main.py flask run --host=0.0.0.0 --port=8080
 
