@@ -49,8 +49,9 @@ def Hello_fucking_world():
 
 @app.route('/gettemp')
 def gettemp():
-    return f"Sensor de temperatura - São Paulo - Casa do Jefter {data.date_t.day}/{data.date_t.month}/{data.date_t.year} - {data.date_t.hour}:{data.date_t.minute}:{data.date_t.second} <br> {data.t} Graus Celsius"
-    return rasp_temp; 
+    #return f"Sensor de temperatura - São Paulo - Casa do Jefter {data.date_t.day}/{data.date_t.month}/{data.date_t.year} - {data.date_t.hour}:{data.date_t.minute}:{data.date_t.second} <br> {data.t} Graus Celsius"
+    return rasp_temp
+
 @app.route('/settemp/<temp2>')
 def settemp(temp2):
     data.t=float(temp2)
@@ -87,8 +88,8 @@ if __name__ == "__main__":
             # "starting_position": "-1",  # "-1" is from the beginning of the partition.
         }
     )
-    ConsumerThread.start()
-    app.run(host='0.0.0.0', port=8080,debug=True)
-    print("Antes de client.close()")
-    client.close()
-    print("Após client.close()")
+ConsumerThread.start()
+app.run(host='0.0.0.0', port=8080,debug=True)
+print("Antes de client.close()")
+client.close()
+print("Após client.close()")
